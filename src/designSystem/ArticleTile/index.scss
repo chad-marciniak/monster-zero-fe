@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.article__tile {
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 0.25s ease;
+    };
+    &:not(:hover) {
+        transform: scale(1);
+        transition: transform 0.25s ease;
+    };
+}
+.article__title {
+    font-size: 36px;
+    font-family: arimo;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.article__description {
+    margin-top: .75rem;
+    font-size: 16px;
+    font-family: theme("fontFamily.arimo");
+}
+.article__date {
+    margin-top: 1rem;
+    font-size: 14px;
+    font-family: theme("fontFamily.arimo");
+}

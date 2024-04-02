@@ -1,0 +1,11 @@
+.header {
+    background-color: theme("colors.grey.500");
+    box-shadow: 0 15px 15px theme("colors.grey.500");
+    z-index: 1000;
+}
+
+.header__top {
+    background-color: theme("colors.grey.400");
+    border-bottom: 1px solid black;
+    height: 20px;
+}

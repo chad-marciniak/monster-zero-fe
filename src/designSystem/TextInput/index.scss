@@ -1,0 +1,13 @@
+.text-input {
+  width: fit-content;
+  border: 1px solid theme("colors.border");
+  height: 45px;
+
+  .MuiInput-input {
+    background-color: theme("colors.grey.400");
+    color: theme("colors.grey.100");
+    font-size: 28px;
+    font: theme("fontFamily.robotomono");
+    padding: 6px 12px;
+  }
+}
