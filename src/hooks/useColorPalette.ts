@@ -16,7 +16,7 @@ function useColorPalette() {
             const subPalette = [];
             for (let j = 0; j < steps; j++) {
                 const currentHue = (hue + j * hueStep) % 360;
-                const lightness = 55 - j * 10; // Adjust lightness for each color
+                const lightness = 60 - j * 10; // Adjust lightness for each color
                 const color = `hsl(${currentHue}, 100%, ${lightness}%)`; // Convert HSL to CSS color
                 subPalette.push(color);
             }

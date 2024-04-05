@@ -9,43 +9,42 @@ type ArticleTileButtonProps = {
 
 export const ArticleTileButton = ({ url, baseColor }: ArticleTileButtonProps) => {
 
-const upBackground = keyframes`
-    from { background-color: #202124; color: ${baseColor}; }
-    to { background-color: ${baseColor}; color: #202124; }
-`;
+    const upBackground = keyframes`
+        from { background-color: #202124; color: ${baseColor}; }
+        to { background-color: ${baseColor}; color: #202124; }
+    `;
 
-const fadeBackground = keyframes`
-    from { background-color: ${baseColor}; color: #202124; }
-    to { background-color: #202124; color: ${baseColor}; }
-`;
+    const fadeBackground = keyframes`
+        from { background-color: ${baseColor}; color: #202124; }
+        to { background-color: #202124; color: ${baseColor}; }
+    `;
 
-const StyledButton = styled(Button)(({ baseColor }) => ({
-    border: `1px solid ${baseColor}`,
-    width: '100%',
-    color: `${baseColor}`,
-    textTransform: 'uppercase',
-    fontSize: '18px',
-    fontWeight: 'bold',
-    backgroundColor: '#202124',
-    animation: `${fadeBackground} 0.5s forwards`,
-    animationPlayState: 'paused',
-    '&:hover': {
-        animation: `${upBackground} .5s forwards`,
-        animationPlayState: 'running',
-    },
-    '&:focus': {
-        animation: `${upBackground} .5s forwards`,
-        animationPlayState: 'running',
-    },
-    '&:active': {
-        backgroundColor: `${baseColor}`,
-        color: '#202124',
-    },
-    '&:not(:hover):not(:focus)': {
+    const StyledButton = styled(Button)(({ baseColor }) => ({
+        border: `1px solid ${baseColor}`,
+        width: '100%',
+        color: `${baseColor}`,
+        textTransform: 'uppercase',
+        fontSize: '18px',
+        fontWeight: 'bold',
+        backgroundColor: '#202124',
         animation: `${fadeBackground} 0.5s forwards`,
-        animationPlayState: 'running', // Activate animation on blur or mouse off
-    },
-}));
+        animationPlayState: 'paused',
+        '&:hover': {
+            animation: `${upBackground} .5s forwards`,
+            animationPlayState: 'running',
+        },
+        '&:focus': {
+            animation: 'none', // Disable animation on focus
+        },
+        '&:active': {
+            backgroundColor: `${baseColor}`,
+            color: '#202124',
+        },
+        '&:not(:hover):not(:focus)': {
+            animation: `${fadeBackground} 0.5s forwards`,
+            animationPlayState: 'running', // Activate animation on blur or mouse off
+        },
+    }));
 
     return (
         <StyledButton baseColor={baseColor} style={{'backgroundColor': baseColor}} className="flex grow text-center justify-center p-2 mt-6" href={url}>

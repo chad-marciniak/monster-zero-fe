@@ -53,13 +53,16 @@ export const ArticleList = ({ data }: ArticleListProps) => {
             createArticles();
             setDataLoaded(true);
         }
+        return () => {
+            setDataLoaded(false);
+        }
     }, [data, createArticles]);
 
     return (
         <div className="article__list_container">
             {
                 articles.length && articles?.map((article, index) => (
-                    <ArticleTile key={index} {...article} />
+                    <ArticleTile url="" key={`article__tile_${index}`} {...article} />
                 ))
             }
         </div>

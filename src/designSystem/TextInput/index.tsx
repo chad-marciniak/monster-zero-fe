@@ -4,27 +4,27 @@ import "./index.scss";
 
 type TextInputProps = {
   name: string;
-  value: string;
-  label: string;
+  value?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   error: string;
-  width: string;
+  className?: string;
+  placeholder?: string;
+  ref: Ref<HTMLInputElement>;
 };
 
 
 export const TextInput = forwardRef(
   (
-    { name, value, label, onChange, error, width }: TextInputProps,
+    { name, value, onChange, error, className, placeholder }: TextInputProps,
     ref: Ref<HTMLInputElement>
   ) => (
     <Input
-      className="text-input"
+      className={`text-input ${className}`}
       name={name}
       type="text"
-      width={width}
       value={value}
       error={!!error}
-      placeolder={label}
+      placeholder={placeholder}
       onChange={onChange}
       ref={ref}
     />
