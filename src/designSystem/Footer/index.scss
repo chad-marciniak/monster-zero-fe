@@ -1,4 +1,8 @@
 .footer {
     background-color: theme("colors.grey.500");
     color: theme("colors.grey.300");
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -10px 20px #202124;
 }

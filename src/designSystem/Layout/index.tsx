@@ -12,7 +12,7 @@ export const Layout = ({ children }: LayoutProps) => {
     <div className="flex grid">
       <Header />
       <div className="container lg flex mx-auto layout__container">
-        <div className="grid mt-60">{children}</div>
+        <div className="grid mt-54">{children}</div>
       </div>
       <Footer />
     </div>

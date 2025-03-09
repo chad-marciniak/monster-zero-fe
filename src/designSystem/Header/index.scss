@@ -5,7 +5,10 @@
 }
 
 .header__top {
-    background-color: theme("colors.grey.400");
+    background-color: #282a33;
     border-bottom: 1px solid black;
-    height: 20px;
+    height: 24px;
+}
+.search--input-container {
+    width: 100%;
 }

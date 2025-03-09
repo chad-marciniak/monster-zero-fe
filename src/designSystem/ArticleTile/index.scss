@@ -2,39 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes bounce {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(0.95);
-    }
-    100% {
-      transform: scale(1.05);
-    }
-  }
-  
-
+.full-opacity {
+  opacity: 1;
+}
+.zero-opacity {
+  opacity: 0;
+}
 .article__tile {
-  transition: transform 0.25s ease;
+  opacity: 0;
+  animation: fadeUp 0.5s forwards;
 }
-
-.article__tile:hover {
-  animation: bounce 0.5s;
-transform: scale(1.05);
-}
-
 .article__title {
   font-size: 36px;
   font-family: arimo;
   text-transform: uppercase;
   font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .article__description {
   margin-top: .75rem;
   font-size: 16px;
   font-family: theme("fontFamily.arimo");
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .article__date {

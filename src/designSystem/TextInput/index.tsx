@@ -6,7 +6,7 @@ type TextInputProps = {
   name: string;
   value?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  error: string;
+  error: boolean;
   className?: string;
   placeholder?: string;
   ref: Ref<HTMLInputElement>;

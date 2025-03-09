@@ -12,7 +12,7 @@ export const Logo = ({ size, primaryColor, backgroundColor }: LogoProps) => (
   >
     <div className="flex logo-text">M0NSTER</div>
     <div className="flex self-end relative logo-text">ZER0</div>
-    <p className="text-xs pt-2 pb-2">Technology, Programming and Art</p>
+    <div className="text-xs pt-2 pb-2 self-end">Programming Technology Art</div>
   </div>
 );
 

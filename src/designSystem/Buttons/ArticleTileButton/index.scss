@@ -1,37 +1,8 @@
-@keyframes downBackground {
-    from { background-color: #ff00ff; color: #202124; }
-    to { background-color: #202124; color: #ff00ff; }
-}
-
-@keyframes upBackground {
-    from { background-color: #202124; color: #ff00ff; }
-    to { background-color: #ff00ff; color: #202124; }
-}
 .article__button {
-    border: 1px solid ;
-    width: 100%;
-    font-family: theme("fontFamily.arimo");
-    color: #202124;
+    text-transform: 'uppercase';
+    font-family: 'arimo';
     text-transform: uppercase;
     font-size: 18px;
     font-weight: bold;
-    background-color: #202124;
-    animation: downBackground 2s forwards;
-    animation-play-state: paused;
-    &:hover {
-        animation: upBackground 2s forwards;
-        animation-play-state: running;
-    }
-    &:focus {
-        animation: upBackground 2s forwards;
-        animation-play-state: running;
-    }
-    &:active {
-        background-color: #ff00ff;
-        color: #202124;
-    }
-    &:not(:hover):not(:focus) {
-      animation: fadeBackground 2s forwards;
-      animation-play-state: running;
-    }
+    width: 100%;
 }
